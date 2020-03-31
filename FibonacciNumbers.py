@@ -1,21 +1,23 @@
-
+# Defining the fibonacci series.
 fibonacci_numbers = [1,2]
-
-while fibonacci_numbers[-1] <= 400000:
+# Loop for less than 4 million.
+while fibonacci_numbers[-1] < 4000000:
     fibonacci_numbers.append(fibonacci_numbers[-1] + fibonacci_numbers[-2])
 
 del fibonacci_numbers[-1]
-
+print(fibonacci_numbers)
+# Getting the even logic.
 evenFibNum = []
 for fib_numbers in fibonacci_numbers:
     if fib_numbers % 2 == 0:
-        totalSum = 0
         evenFibNum.append(fib_numbers)
 print(evenFibNum)
-for evennum in evenFibNum:
-        totalSum += evennum
+# finding the sum.
+total_Sum = 0
+for even_num in evenFibNum:
+    total_Sum += even_num
 
-print(totalSum)
+print(total_Sum)
 
 
 
